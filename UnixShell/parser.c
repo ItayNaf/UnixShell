@@ -88,6 +88,7 @@ int parse_command(char command[])
 
 		int ret = exec_cmd(args, len);
 		free_args(args, len);
+		args = NULL;
 		if (ret == RET_FAILURE)
 		{
 			printf("Command not recognized\n");
